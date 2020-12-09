@@ -1,0 +1,58 @@
+IF (BUILD_TESTS)
+  IF (ENABLE_COVERAGE)
+    FIND_PROGRAM(GCOV_PATH gcov)
+    FIND_PROGRAM(GENHTML_PATH genhtml)
+    FIND_PROGRAM(LCOV_PATH lcov)
+
+    IF (NOT GCOV_PATH)
+      MESSAGE(FATAL_ERROR "gcov not found")
+    ENDIF ()
+
+    IF (NOT GENHTML_PATH)
+      MESSAGE(FATAL_ERROR "genhtml not found")
+    ENDIF ()
+
+    IF (NOT LCOV_PATH)
+      MESSAGE(FATAL_ERROR "lcov not found")
+    ENDIF ()
+
+    IF (NOT WIN32)
+      SET(CMAKE_CXX_FLAGS "-fprofile-instr-generate -fcoverage-mapping")
+      SET(CMAKE_C_FLAGS "-fprofile-instr-generate -fcoverage-mapping")
+    ENDIF ()
+
+    FUNCTION(SETUP_COVERAGE_TARGET)
+      IF (ENABLE_COVERAGE)
+        SET(CMAKE_CXX_FLAGS "-fprofile-instr-generate -fcoverage-mapping")
+        SET(CMAKE_C_FLAGS "-fprofile-instr-generate -fcoverage-mapping")
+
+        MESSAGE(STATUS "Coverage enabled for target ${TARGET_NAME}")
+      ENDIF ()
+    ENDFUNCTION()
+  ENDIF ()
+
+  IF (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    SET(GTEST_LIB gtest_maind gtestd)
+  ELSE ()
+    SET(GTEST_LIB gtest_main gtest)
+  ENDIF ()
+
+  IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    SET(GTEST_LIB ${GTEST_LIB} pthread)
+  ENDIF ()
+
+  MESSAGE(VERBOSE "Linking to gtest library: ${GTEST_LIB}")
+  ENABLE_TESTING()
+
+  FUNCTION(SETUP_TEST_TARGET)
+    SET(_TARGET_NAME ${ARGV0})
+    SET(_TEST_NAME ${ARGV1})
+    ADD_DEPENDENCIES(${_TARGET_NAME} img)
+    TARGET_LINK_LIBRARIES(${_TARGET_NAME} ${GTEST_LIB})
+    IF (ENABLE_COVERAGE)
+      SETUP_COVERAGE_TARGET(${_TARGET_NAME})
+    ENDIF ()
+    ADD_TEST(NAME ${_TEST_NAME} COMMAND ${_TARGET_NAME})
+    TARGET_LINK_LIBRARIES(${_TARGET_NAME} img)
+  ENDFUNCTION()
+ENDIF ()

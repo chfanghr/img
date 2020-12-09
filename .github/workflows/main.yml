@@ -1,0 +1,49 @@
+name: CI
+on: [ push ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Add python3 to PATH
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
+      - name: Install conan
+        run: pip3 install conan
+      - name: Install cmake
+        uses: symbitic/install-cmake@master
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      - name: Install LLVM
+        run: sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+      - name: Check compiler
+        run: |
+          printf "clang(cc) - %s\n" $(command -v clang)
+          clang --version
+          printf "\n"
+          printf "clang++(c++) - %s\n" $(command -v clang++)
+          clang++ --version
+      - name: Cache conan packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.conan
+          key: ${{ runner.os }}-conan
+      - name: Cache debug build directory
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/cmake-debug-build
+          key: ${{ runner.os }}-debug-build
+      - name: Build and test(debug)
+        run: |
+          export BUILD_FOLDER="cmake-debug-build"
+          export CC="$(command -v clang)"
+          export CXX="$(command -v clang++)"
+          conan install . -s build_type=Debug -s compiler.libcxx=libstdc++11 --install-folder=${BUILD_FOLDER} --build=missing
+          cd ${BUILD_FOLDER}
+          cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON -DBUILD_EXAMPLES=ON -DENABLE_COVERAGE=OFF ..
+          make -j8
+          ctest -VV
