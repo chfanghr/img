@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="img" targetName="pixel" />
+      <config projectName="img" targetName="img" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -11,15 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/img/common/fmt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/img/internal/promote.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/img/internal/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/img/pixel/format.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/img/pixel/pixel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/placeholder.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="component: add pixel">
+      <change beforePath="$PROJECT_DIR$/include/img/common/fmt.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/common/fmt.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +81,16 @@
       <option name="presentableId" value="Default" />
       <updated>1607525726704</updated>
       <workItem from="1607525730867" duration="590000" />
-      <workItem from="1607527152278" duration="13689000" />
+      <workItem from="1607527152278" duration="14100000" />
     </task>
+    <task id="LOCAL-00001" summary="component: add pixel">
+      <created>1607540930498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607540930498</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +107,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="component: add pixel" />
+    <option name="LAST_COMMIT_MESSAGE" value="component: add pixel" />
   </component>
 </project>
