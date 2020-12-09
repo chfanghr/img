@@ -15,5 +15,13 @@ INCLUDE(TestHelper)
 
 INCLUDE_DIRECTORIES(include)
 
+ADD_LIBRARY(img
+            include/img/pixel/format.h
+            include/img/pixel/pixel.h
+            include/img/internal/promote.h
+            include/img/internal/types.h
+            include/img/common/fmt.h
+            src/placeholder.cc) # dev: workaround linker language
+
 IF (BUILD_TESTS)
 ENDIF ()
