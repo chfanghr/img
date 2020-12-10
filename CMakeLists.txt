@@ -26,7 +26,7 @@ ADD_LIBRARY(img
             include/img/internal/utils.h
             include/img/pixel/conversations.h
             # dev: workaround linker language
-            src/placeholder.cc)
+            src/placeholder.cc )
 
 IF (BUILD_TESTS)
 ENDIF ()

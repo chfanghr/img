@@ -7,15 +7,11 @@
 
 #include <string>
 
-namespace img {
-namespace common {
+namespace img::common {
 template<typename T>
 std::string Display(const T &);
 
 template<typename T>
 std::string DebugDisplay(const T &);
-}
-
-using common::Display;
 }
 #endif //IMG_INCLUDE_IMG_INTERNAL_FMT_H_

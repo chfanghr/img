@@ -240,7 +240,6 @@ class Pixel {
  private:
   std::array<T, nr_channels_> data_;
 };
-}
 
 template<typename PixelType, typename = void>
 struct IsPixelType : std::false_type {};
@@ -255,6 +254,7 @@ struct IsPixelType<PixelType, std::void_t<
 
 template<typename T>
 constexpr bool kIsPixelType = IsPixelType<T>::value;
+}
 
 namespace internal {
 template<typename T, std::size_t nr_channels_, pixel::Format format_>
@@ -262,9 +262,6 @@ struct Promote<pixel::Pixel<T, nr_channels_, format_>> {
   using Type = pixel::Pixel<Promote<T>, nr_channels_, format_>;
 };
 }
-
-using img::pixel::Pixel;
-using PixelFormat = img::pixel::Format;
 }
 
 #endif //IMG_INCLUDE_IMG_PIXEL_PIXEL_H_

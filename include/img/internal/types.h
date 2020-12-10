@@ -7,19 +7,24 @@
 
 #include <cstdint>
 
-namespace img::internal {
-using float32_t = float;
-using float64_t = double;
+namespace img {
+namespace internal {
+using Float32 = float;
+using Float64 = double;
 
-static_assert(sizeof(float32_t) == 32 / 8, "float32_t is not 32 bits");
-static_assert(sizeof(float64_t) == 64 / 8, "float64_t is not 64 bits");
+static_assert(sizeof(Float32) == 32 / 8, "Float32 is not 32 bits");
+static_assert(sizeof(Float64) == 64 / 8, "Float64 is not 64 bits");
 
 #if defined(IMG_DEFAULT_SCALAR_SIGNLE_PRECISION)
-using default_float_t = float32_t
+using DefaultFloat = Float32
 #else
-using default_float_t = float64_t;
+using DefaultFloat = Float64;
 #endif
+}
 
+using internal::Float32;
+using internal::Float64;
+using internal::DefaultFloat;
 }
 
 #endif //IMG_INCLUDE_IMG_INTERNAL_TYPES_H_

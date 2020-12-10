@@ -52,13 +52,13 @@ struct Promote<std::int64_t> {
 };
 
 template<>
-struct Promote<float32_t> {
-  using Type = float64_t;
+struct Promote<Float32> {
+  using Type = Float64;
 };
 
 template<>
-struct Promote<float64_t> {
-  using Type = float64_t;
+struct Promote<Float64> {
+  using Type = Float64;
 };
 
 template<typename T>
