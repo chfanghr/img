@@ -103,6 +103,13 @@ template<Format src, Format dst>
 constexpr bool ConversationRequireAlphaValue() noexcept {
   return ConversationRequireAlphaValue(src, dst);
 }
+
+enum class SampleFormat : unsigned char {
+  kUnsignedInteger,
+  kSignedInteger,
+  kFloatingPoint,
+  kUnknown
+};
 }
 
 #endif //IMG_INCLUDE_IMG_PIXEL_FORMAT_H_

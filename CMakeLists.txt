@@ -21,7 +21,12 @@ ADD_LIBRARY(img
             include/img/internal/promote.h
             include/img/internal/types.h
             include/img/common/fmt.h
-            src/placeholder.cc) # dev: workaround linker language
+            include/img/internal/explicit_type.h
+            include/img/pixel/traits.h
+            include/img/internal/utils.h
+            include/img/pixel/conversations.h
+            # dev: workaround linker language
+            src/placeholder.cc)
 
 IF (BUILD_TESTS)
 ENDIF ()
