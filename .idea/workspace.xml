@@ -11,14 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: add pixel traits">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/img/common/fmt.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/common/fmt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/img/internal/promote.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/internal/promote.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/img/internal/types.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/internal/types.h" afterDir="false" />
+    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: add conversation from greyscale to other">
       <change beforePath="$PROJECT_DIR$/include/img/pixel/conversations.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/conversations.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/img/pixel/pixel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/pixel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,7 @@
       <workItem from="1607525730867" duration="590000" />
       <workItem from="1607527152278" duration="20713000" />
       <workItem from="1607587827712" duration="2473000" />
-      <workItem from="1607620789986" duration="1764000" />
+      <workItem from="1607620789986" duration="2089000" />
     </task>
     <task id="LOCAL-00001" summary="component: add pixel">
       <created>1607540930498</created>
@@ -112,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607589175688</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pixel: add conversation from greyscale to other">
+      <created>1607625804493</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607625804493</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +135,7 @@
     <MESSAGE value="component: add pixel" />
     <MESSAGE value="chore: export img::common::Display as public api" />
     <MESSAGE value="pixel: add pixel traits" />
-    <option name="LAST_COMMIT_MESSAGE" value="pixel: add pixel traits" />
+    <MESSAGE value="pixel: add conversation from greyscale to other" />
+    <option name="LAST_COMMIT_MESSAGE" value="pixel: add conversation from greyscale to other" />
   </component>
 </project>

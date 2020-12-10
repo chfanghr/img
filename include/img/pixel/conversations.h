@@ -130,7 +130,71 @@ struct PixelConversation<Format::kY, Format::kARGB> {
   }
 };
 
+// kYA ->
 
+template<>
+struct PixelConversation<Format::kYA, Format::kYA> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 2, Format::kYA> Apply(const Pixel<T, 2, format> &src) noexcept {
+    return src;
+  }
+};
+
+template<>
+struct PixelConversation<Format::kYA, Format::kY> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 1, Format::kY> Apply(const Pixel<T, 2, format> &src) noexcept {
+    return {src[0]};
+  }
+};
+
+template<>
+struct PixelConversation<Format::kYA, Format::kRGB> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 3, Format::kRGB> Apply(const Pixel<T, 2, format> &src) {
+    return {src[0], src[0], src[0]};
+  }
+};
+
+template<>
+struct PixelConversation<Format::kYA, Format::kGBR> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 3, Format::kGBR> Apply(const Pixel<T, 2, format> &src) {
+    return {src[0], src[0], src[0]};
+  }
+};
+
+template<>
+struct PixelConversation<Format::kYA, Format::kRGBA> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 4, Format::kRGBA> Apply(const Pixel<T, 2, format> &src) {
+    return {src[0], src[0], src[0], src[1]};
+  }
+};
+
+template<>
+struct PixelConversation<Format::kYA, Format::kBGRA> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 4, Format::kBGRA> Apply(const Pixel<T, 2, format> &src) {
+    return {src[0], src[0], src[0], src[1]};
+  }
+};
+
+template<>
+struct PixelConversation<Format::kYA, Format::kABGR> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 4, Format::kABGR> Apply(const Pixel<T, 2, format> &src) {
+    return {src[1], src[0], src[0], src[0]};
+  }
+};
+
+template<>
+struct PixelConversation<Format::kYA, Format::kARGB> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 4, Format::kARGB> Apply(const Pixel<T, 2, format> &src) {
+    return {src[1], src[0], src[0], src[0]};
+  }
+};
 }
 }
 
