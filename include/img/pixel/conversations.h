@@ -58,13 +58,13 @@ struct BGRToYCoefficients {
       DefaultFloat(0.144),
       DefaultFloat(0.587),
       DefaultFloat(0.299),
-  }
+  };
 };
 
 template<Format src_format, Format dst_format>
 struct PixelConversation;
 
-// kY ->
+// kY -> ?
 
 template<>
 struct PixelConversation<Format::kY, Format::kY> {
@@ -130,7 +130,7 @@ struct PixelConversation<Format::kY, Format::kARGB> {
   }
 };
 
-// kYA ->
+// kYA -> ?
 
 template<>
 struct PixelConversation<Format::kYA, Format::kYA> {
@@ -194,6 +194,21 @@ struct PixelConversation<Format::kYA, Format::kARGB> {
   static constexpr Pixel<T, 4, Format::kARGB> Apply(const Pixel<T, 2, format> &src) {
     return {src[1], src[0], src[0], src[0]};
   }
+};
+
+// kRGB -> ?
+
+template<>
+struct PixelConversation<Format::kRGB, Format::kRGB> {
+  template<typename T, Format format>
+  static constexpr Pixel<T, 3, Format::kRGB> Apply(const Pixel<T, 3, format> &src) {
+    return src;
+  }
+};
+
+template<>
+struct PixelConversation<Format::kRGB, Format::kY> {
+  // TODO
 };
 }
 }

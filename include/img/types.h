@@ -5,10 +5,11 @@
 #ifndef IMG_INCLUDE_IMG_INTERNAL_TYPES_H_
 #define IMG_INCLUDE_IMG_INTERNAL_TYPES_H_
 
+#include "internal/round.h"
+
 #include <cstdint>
 
 namespace img {
-namespace internal {
 using Float32 = float;
 using Float64 = double;
 
@@ -20,11 +21,12 @@ using DefaultFloat = Float32
 #else
 using DefaultFloat = Float64;
 #endif
-}
 
-using internal::Float32;
-using internal::Float64;
-using internal::DefaultFloat;
+using internal::Round;
+using internal::RoundHalfUpDyn;
+using internal::RoundHalfUp;
+using internal::RoundHalfDownDyn;
+using internal::RoundHalfDown;
 }
 
 #endif //IMG_INCLUDE_IMG_INTERNAL_TYPES_H_

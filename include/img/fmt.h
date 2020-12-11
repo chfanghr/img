@@ -7,7 +7,7 @@
 
 #include <string>
 
-namespace img::common {
+namespace img {
 template<typename T>
 std::string Display(const T &);
 

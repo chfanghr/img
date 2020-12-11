@@ -7,12 +7,24 @@
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: add conversation from greyscale to other">
+    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: add conversation from greyscale(with alpha channel) to other">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/img/internal/round.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/img/internal/type_traits.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/img/common/fmt.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/fmt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/img/internal/explicit_type.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/internal/explicit_type.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/img/internal/promote.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/internal/promote.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/img/internal/types.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/types.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/img/pixel/conversations.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/conversations.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/img/pixel/pixel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/pixel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +50,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -46,27 +59,27 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/include/img/common" />
       <recent name="$PROJECT_DIR$/include/img" />
+      <recent name="$PROJECT_DIR$/include/img/common" />
       <recent name="$PROJECT_DIR$/include" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="img" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="img" TARGET_NAME="img" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="img" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="img" TARGET_NAME="img" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -83,7 +96,8 @@
       <workItem from="1607525730867" duration="590000" />
       <workItem from="1607527152278" duration="20713000" />
       <workItem from="1607587827712" duration="2473000" />
-      <workItem from="1607620789986" duration="2089000" />
+      <workItem from="1607620789986" duration="4255000" />
+      <workItem from="1607668363089" duration="3366000" />
     </task>
     <task id="LOCAL-00001" summary="component: add pixel">
       <created>1607540930498</created>
@@ -113,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607625804493</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="pixel: add conversation from greyscale(with alpha channel) to other">
+      <created>1607626182671</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607626182671</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +157,21 @@
     <MESSAGE value="chore: export img::common::Display as public api" />
     <MESSAGE value="pixel: add pixel traits" />
     <MESSAGE value="pixel: add conversation from greyscale to other" />
-    <option name="LAST_COMMIT_MESSAGE" value="pixel: add conversation from greyscale to other" />
+    <MESSAGE value="pixel: add conversation from greyscale(with alpha channel) to other" />
+    <option name="LAST_COMMIT_MESSAGE" value="pixel: add conversation from greyscale(with alpha channel) to other" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1607671736595">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1607671736595" />
+    <state x="221" y="100" key="SettingsEditor" timestamp="1607671758555">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="100" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1607671758555" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1607671709311">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1607671709311" />
   </component>
 </project>

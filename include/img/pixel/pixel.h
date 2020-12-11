@@ -9,7 +9,7 @@
 
 #include "format.h"
 #include "../internal/promote.h"
-#include "../common/fmt.h"
+#include "../fmt.h"
 
 namespace img {
 namespace pixel {

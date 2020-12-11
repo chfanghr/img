@@ -8,7 +8,6 @@
 #include <type_traits>
 
 namespace img::internal {
-
 template<typename Value, typename Tag>
 class ExplicitType {
  public:
@@ -63,11 +62,29 @@ class ExplicitType {
   friend constexpr void swap(ExplicitType &a, ExplicitType &b) {
     std::swap(a.value_, b.value_);
   }
+
  private:
   static_assert(std::is_arithmetic_v<Value>);
 
   Value value_;
 };
+
+template<typename Value>
+constexpr auto ValueOf(const Value &value) noexcept { return value; }
+
+template<typename V, typename T>
+constexpr auto ValueOf(const ExplicitType<V, T> &val) noexcept { return val.value(); }
+
+template<typename...Ts>
+struct ExplicitTypeUniqueHelper;
+
+template<typename ... Ts>
+struct ExplicitTypeUnique {
+  using Type = ExplicitTypeUniqueHelper<Ts...>;
+};
+
+template<typename ...Ts>
+using ExplicitTypeUniqueType = typename ExplicitTypeUnique<Ts...>::Type;
 }
 
 #endif //IMG_INCLUDE_IMG_INTERNAL_EXPLICIT_TYPE_H_
