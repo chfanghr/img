@@ -5,7 +5,7 @@
 #ifndef IMG_INCLUDE_IMG_INTERNAL_PROMOTE_H_
 #define IMG_INCLUDE_IMG_INTERNAL_PROMOTE_H_
 
-#include "../types.h"
+#include "../basic_types.h"
 
 namespace img::internal {
 template<typename T>

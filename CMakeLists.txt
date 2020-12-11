@@ -29,9 +29,10 @@ SET(INTERNAL_HEADERS
         include/img/internal/utils.h)
 
 SET(IMG_HEADERS
-        include/img/fmt.h
-        include/img/types.h
-        )
+    include/img/fmt.h
+    include/img/basic_types.h
+    include/img/math.h
+    include/img/types.h)
 
 SET(STD_HEADERS
         <type_traits>
