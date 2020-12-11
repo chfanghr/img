@@ -16,7 +16,7 @@ enum class Format : unsigned char {
   kXX,
 
   kRGB,
-  kGBR,
+  kBGR,
   kYCbCr,
   XXX,
 
@@ -41,7 +41,7 @@ constexpr std::size_t GetNrChannels(Format format) noexcept {
     case Format::kXX:return 2;
 
     case Format::kRGB:
-    case Format::kGBR:
+    case Format::kBGR:
     case Format::kYCbCr:
     case Format::XXX:return 3;
 
@@ -71,7 +71,7 @@ constexpr bool HasAlphaChannel(Format format) noexcept {
     case Format::kX:
     case Format::kXX:
     case Format::kRGB:
-    case Format::kGBR:
+    case Format::kBGR:
     case Format::kYCbCr:
     case Format::XXX:
     case Format::kCMYK:
