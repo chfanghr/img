@@ -11,11 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: done with">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/img/pixel/conversations.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/conversations.h" afterDir="false" />
-    </list>
+    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: implement convert functions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +85,7 @@
       <workItem from="1607587827712" duration="2473000" />
       <workItem from="1607620789986" duration="4255000" />
       <workItem from="1607668363089" duration="3782000" />
-      <workItem from="1607708733621" duration="1656000" />
+      <workItem from="1607708733621" duration="2057000" />
     </task>
     <task id="LOCAL-00001" summary="component: add pixel">
       <created>1607540930498</created>
@@ -168,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607706341385</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="pixel: implement convert functions">
+      <created>1607710407709</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607710407709</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +201,7 @@
     <MESSAGE value="pixel: fix compilation error" />
     <MESSAGE value="chore: export types from nested namespaces as public apis" />
     <MESSAGE value="chore: ignore sourcetrail database and project files" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: ignore sourcetrail database and project files" />
+    <MESSAGE value="pixel: implement convert functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="pixel: implement convert functions" />
   </component>
 </project>

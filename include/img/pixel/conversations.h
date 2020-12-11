@@ -316,6 +316,11 @@ constexpr auto Convert(const PixelSrc &src, const Element &alpha) noexcept {
   constexpr auto format_src = Traits<PixelSrc>::kFormat;
   return convertors::Conversation<format_src, format_dst>::Apply(src, alpha);
 }
+
+template<typename T, std::size_t N>
+constexpr Pixel <T, N> YToNChannel(const Pixel<T, 1> &src) noexcept {
+  return {internal::MakeArray<T, N>(src[0])};
+}
 }
 
 #endif //IMG_INCLUDE_IMG_PIXEL_CONVERSATIONS_H_
