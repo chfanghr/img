@@ -6,7 +6,7 @@ SET(CMAKE_CXX_STANDARD_REQUIRED true)
 SET(CMAKE_CXX_EXTENSIONS OFF)
 
 SET(CMAKE_MODULE_PATH
-    ${CMAKE_SOURCE_DIR}/CMake/modules/)
+        ${CMAKE_SOURCE_DIR}/CMake/modules/)
 
 INCLUDE(Options)
 INCLUDE(ConanHelper)
@@ -15,37 +15,46 @@ INCLUDE(TestHelper)
 
 INCLUDE_DIRECTORIES(include)
 
-ADD_LIBRARY(img
-            include/img/pixel/format.h
-            include/img/pixel/pixel.h
-            include/img/internal/promote.h
-            include/img/types.h
-            include/img/fmt.h
-            include/img/internal/explicit_type.h
-            include/img/pixel/traits.h
-            include/img/internal/utils.h
-            include/img/pixel/conversations.h
-            # dev: workaround linker language
-            src/placeholder.cc include/img/internal/round.h include/img/internal/type_traits.h)
+SET(PIXEL_HEADERS
+        include/img/pixel/format.h
+        include/img/pixel/pixel.h
+        include/img/pixel/traits.h
+        include/img/pixel/conversations.h)
 
-TARGET_PRECOMPILE_HEADERS(img PUBLIC
-                          include/img/pixel/format.h
-                          include/img/pixel/pixel.h
-                          include/img/internal/promote.h
-                          include/img/types.h
-                          include/img/fmt.h
-                          include/img/internal/explicit_type.h
-                          include/img/pixel/traits.h
-                          include/img/internal/utils.h
-                          include/img/pixel/conversations.h
-                          include/img/internal/round.h
-                          PRIVATE
-                          <cstdint>
-                          <cstdlib>
-                          <cmath>
-                          <array>
-                          <vector>
-                          <type_traits>
-                          )
+SET(INTERNAL_HEADERS
+        include/img/internal/explicit_type.h
+        include/img/internal/promote.h
+        include/img/internal/round.h
+        include/img/internal/type_traits.h
+        include/img/internal/utils.h)
+
+SET(IMG_HEADERS
+        include/img/fmt.h
+        include/img/types.h
+        )
+
+SET(STD_HEADERS
+        <type_traits>
+        <cstdlib>
+        <cstdint>
+        <array>
+        <vector>
+        <cmath>)
+
+ADD_LIBRARY(img
+        ${PIXEL_HEADERS}
+        ${INTERNAL_HEADERS}
+        ${IMG_HEADERS}
+        # dev: workaround linker language
+        src/placeholder.cc)
+
+TARGET_PRECOMPILE_HEADERS(img
+        PUBLIC
+        ${IMG_HEADERS}
+        PRIVATE
+        ${PIXEL_HEADERS}
+        ${INTERNAL_HEADERS}
+        ${STD_HEADERS})
+
 IF (BUILD_TESTS)
 ENDIF ()
