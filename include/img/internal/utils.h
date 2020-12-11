@@ -70,7 +70,7 @@ constexpr T ApproximateLinearCombination(const Array &src) noexcept {
 
   using Func = decltype(RoundLinearCombinationCoeffFunc<PromotedType, Coeff, shift>);
 
-  constexpr auto c = MakeArray<PromotedType, N>(RoundLinearCombinationCoeffFunc<PromotedType, Coeff, shift>);
+  constexpr auto c = MakeArray<PromotedType, N, Func>(RoundLinearCombinationCoeffFunc<PromotedType, Coeff, shift>);
 
   auto sum = PromotedType{0};
   for (std::size_t i = 0; i < N; i++)
@@ -81,7 +81,6 @@ constexpr T ApproximateLinearCombination(const Array &src) noexcept {
 
 template<typename T, std::size_t N,
     typename Coeff,
-    typename Promoted = Promote<T>,
     typename Array>
 constexpr T LinearCombination(const Array &src) noexcept {
   static_assert(kIsIntegral<T>, "Conversation type T should be floating point");

@@ -11,10 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: conversation from rgb to y">
       <change beforePath="$PROJECT_DIR$/include/img/internal/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/internal/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/img/pixel/conversations.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/conversations.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607671819054</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="pixel: conversation from rgb to y">
+      <created>1607704673868</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607704673868</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,28 +161,7 @@
     <MESSAGE value="pixel: add conversation from greyscale to other" />
     <MESSAGE value="pixel: add conversation from greyscale(with alpha channel) to other" />
     <MESSAGE value="internal: add round facilities" />
-    <option name="LAST_COMMIT_MESSAGE" value="internal: add round facilities" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1607671818761">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1607671818761" />
-    <state x="144" y="78" key="DiffContextDialog" timestamp="1607671770746">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="144" y="78" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1607671770746" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1607671758555">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="221" y="100" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1607671758555" />
-    <state x="320" y="189" key="Vcs.Push.Dialog.v2" timestamp="1607671832494">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="189" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607671832494" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1607671830201">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1607671830201" />
+    <MESSAGE value="pixel: conversation from rgb to y" />
+    <option name="LAST_COMMIT_MESSAGE" value="pixel: conversation from rgb to y" />
   </component>
 </project>
