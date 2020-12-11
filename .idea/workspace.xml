@@ -11,8 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="chore: ignore sourcetrail database and project files">
+    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: done with">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/img/pixel/conversations.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/conversations.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +60,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="img" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="img" TARGET_NAME="img" CONFIG_NAME="Debug">
@@ -87,6 +89,7 @@
       <workItem from="1607587827712" duration="2473000" />
       <workItem from="1607620789986" duration="4255000" />
       <workItem from="1607668363089" duration="3782000" />
+      <workItem from="1607708733621" duration="1656000" />
     </task>
     <task id="LOCAL-00001" summary="component: add pixel">
       <created>1607540930498</created>
