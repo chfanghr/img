@@ -70,8 +70,7 @@ struct PixelConversation;
 template<>
 struct PixelConversation<Format::kY, Format::kY> {
   template<typename T, Format format>
-  static constexpr Pixel<T, 1, Format::kY> Apply(const Pixel<T, 1, format> &src) noexcept
-  noexcept{
+  static constexpr Pixel<T, 1, Format::kY> Apply(const Pixel<T, 1, format> &src) noexcept {
     return src;
   }
 };
@@ -145,8 +144,7 @@ struct PixelConversation<Format::kYA, Format::kYA> {
 template<>
 struct PixelConversation<Format::kYA, Format::kY> {
   template<typename T, Format format>
-  static constexpr Pixel<T, 1, Format::kY> Apply(const Pixel<T, 2, format> &src) noexcept
-  noexcept{
+  static constexpr Pixel<T, 1, Format::kY> Apply(const Pixel<T, 2, format> &src) noexcept {
     return {src[0]};
   }
 };

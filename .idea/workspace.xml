@@ -11,8 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="pixel: conversation from rgb to y">
-      <change beforePath="$PROJECT_DIR$/include/img/internal/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/internal/utils.h" afterDir="false" />
+    <list default="true" id="4fb9ab0b-4310-4265-b813-39d1d1a43294" name="Default Changelist" comment="internal: fix linear combination utils">
+      <change beforePath="$PROJECT_DIR$/include/img/pixel/conversations.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/img/pixel/conversations.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607704673868</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="internal: fix linear combination utils">
+      <created>1607704961373</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607704961373</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +169,7 @@
     <MESSAGE value="pixel: add conversation from greyscale(with alpha channel) to other" />
     <MESSAGE value="internal: add round facilities" />
     <MESSAGE value="pixel: conversation from rgb to y" />
-    <option name="LAST_COMMIT_MESSAGE" value="pixel: conversation from rgb to y" />
+    <MESSAGE value="internal: fix linear combination utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="internal: fix linear combination utils" />
   </component>
 </project>
