@@ -66,3 +66,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Sourcetrail database
+*.srctrlbm
+*.srctrldb
+*.srctrlprj
